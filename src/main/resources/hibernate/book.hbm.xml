@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "classpath://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns = "http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="servletProject.entity.Book" table="book">
+        <id name="id" column="id" type="java.lang.Integer">
+            <generator class="native">
+                <param name="sequence">book_id_seq</param>
+            </generator>
+        </id>
+        <property name="name" type="string" column="name"></property>
+        <property name="author_name" type="string" column="author_name"></property>
+        <property name="price" type="java.lang.Double" column="price"></property>
+    </class>
+</hibernate-mapping>
